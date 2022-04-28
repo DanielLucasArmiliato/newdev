@@ -12,14 +12,21 @@ programa {
 				leia(numeros[i])
 		}
 
-		para(inteiro i=7; i > 0; i--){
+		para(inteiro i=6; i >= 0; i--){
 
-			se(numeros[i - 1] > numeros[i]){
+			se(numeros[i] > numeros[i + 1]){
 				se(numeros[i] > antes){
-					antes = numeros[i - 1]
-					coluna = i - 1
+					antes = numeros[i]
+					coluna = i + 1
+				}
+		
+			} se(numeros[i] < numeros[i + 1]) {
+				se(numeros[i + 1] > antes){
+					antes = numeros[i + 1]
+					coluna = i + 1
 				}
 			}
+				
 			
 		}
 
@@ -31,9 +38,9 @@ programa {
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 220; 
+ * @POSICAO-CURSOR = 389; 
  * @PONTOS-DE-PARADA = ;
- * @SIMBOLOS-INSPECIONADOS = {numeros, 4, 10, 7};
+ * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
  * @FILTRO-ARVORE-TIPOS-DE-SIMBOLO = variavel, vetor, matriz, funcao;
  */
