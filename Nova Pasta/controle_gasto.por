@@ -1,8 +1,8 @@
 programa {
 	
 	funcao inicio() {
-		inteiro numero, limite, aux, Ventrada[200], Vsaida[200], Vlucro[200],arrecadador 
-		cadeia usuario, carros[200], codigo[200]
+		inteiro numero, limite, aux, Ventrada[200], Vsaida[200], Vlucro[200],arrecadador, Nplanilha[200][5]
+		cadeia usuario, carros[200], codigo[200], Cplanilha[200][5]
 
 		carros[0] = "teste"
 		codigo[0] = "0"
@@ -15,6 +15,7 @@ programa {
 		
 		limite = 2
 		arrecadador = 0
+		aux = 0
 	
 		escreva("Bem vindo ao sistema de controle de entrada e saida\n")
 
@@ -37,7 +38,44 @@ programa {
 					leia(usuario)
 
 					se(usuario == "m" ou usuario == "M"){
-						mplanilia(carros, codigo, Ventrada, Vsaida, Vlucro) 
+						 para(inteiro l=0; l < 200; l++){
+						 	se(l == 0){
+						 		escreva("codigo, carro, Ventrada, Vsaida, Vlucro\n")
+						 	}
+							para(inteiro c=0; c < 5; c++){
+								se(c == 0){
+									se(codigo[l] != ""){
+										Cplanilha[l][c] = codigo[l]
+										escreva(Cplanilha[l][c], " ")
+									}	
+								}
+								se(c == 1){
+									se(carros[l] != ""){
+										Cplanilha[l][c] = carros[l]
+										escreva(Cplanilha[l][c], " ")
+									}
+								}
+								se(c == 2){
+									se(Ventrada[l] != 0){
+										Nplanilha[l][c] = Ventrada[l]
+										escreva(Nplanilha[l][c], " ")
+									}
+								}
+								se(c == 3){
+									se(Vsaida[l] != 0){
+										Nplanilha[l][c] = Vsaida[l]
+										escreva(Nplanilha[l][c], " ")
+									}
+								}
+								se(c == 4){
+									se(Vlucro[l] != 0){
+										Nplanilha[l][c] = Vlucro[l]
+										escreva(Nplanilha[l][c], "\n")
+									}
+								}
+								
+							}
+						 }
 					}
 					se(usuario == "a" ou usuario == "A"){
 						se(limite > 0) {
@@ -95,10 +133,26 @@ programa {
 					escreva("\nVoce esta no menu de estoque voce deseja\n")
 					escreva("C(mostra todos os carros) A(adicionar carro) R(remover carro) V(voltar) ")
 					leia(usuario)
-					se(usuario == "a" ou usuario == "a") {
+					se(usuario == "c" ou usuario == "C") {
+						escreva("\nLista de carro\n")
+						para(inteiro i=0; i < 200; i++){
+							se(aux % 40 == 0 e aux > 0){
+								escreva("\n")
+							}
+							se(carros[i] != ""){
+								escreva(carros[i]," ")
+								aux++
+							}
+						}
+						se(aux % 40 != 0){
+							escreva("\n")
+						}
+						aux = 0
+					}
+					se(usuario == "a" ou usuario == "A") {
 						escreva("\n")
 						estoque(codigo, Vlucro, "adicionar")
-						escreva("informe aonde voce vai guarda seu carro e codigo ")
+						escreva("\ninforme aonde voce vai guarda seu carro e codigo ")
 						leia(numero)
 						escreva("informe o nome do carro ")
 						leia(usuario)
@@ -260,8 +314,8 @@ programa {
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 3742; 
- * @DOBRAMENTO-CODIGO = [38, 57, 62, 77, 81, 84, 110, 119, 126, 134, 209];
+ * @POSICAO-CURSOR = 354; 
+ * @DOBRAMENTO-CODIGO = [22, 25, 40, 39, 80, 95, 79, 100, 115, 99, 119, 122, 32, 151, 164, 173, 180, 188, 217, 263];
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;

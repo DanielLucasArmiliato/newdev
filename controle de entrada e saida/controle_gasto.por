@@ -1,7 +1,9 @@
 programa {
+	inteiro Ncomprovador[200]
+	cadeia Tcomprovador[200]
 	
 	funcao inicio() {
-		inteiro numero, limite, aux, Ventrada[200], Vsaida[200], Vlucro[200],arrecadador 
+		inteiro numero, limite, aux, Ventrada[200], Vsaida[200], Vlucro[200],arrecadador
 		cadeia usuario, carros[200], codigo[200]
 
 		carros[0] = "teste"
@@ -15,6 +17,7 @@ programa {
 		
 		limite = 2
 		arrecadador = 0
+		aux = 0
 	
 		escreva("Bem vindo ao sistema de controle de entrada e saida\n")
 
@@ -45,6 +48,11 @@ programa {
 							planilia(Vlucro, codigo, "adicionar")
 							escreva("informe aonde voce vai guarda o valor pagor e vendido ")
 							leia(numero)
+							para(inteiro i=0; i < 200; i++){
+								se(numero == Ncomprovador[i]){
+									aux++
+								}
+							}
 							escreva("informe o valor pago ")
 							leia(aux)
 							Ventrada[numero] = aux
@@ -95,10 +103,26 @@ programa {
 					escreva("\nVoce esta no menu de estoque voce deseja\n")
 					escreva("C(mostra todos os carros) A(adicionar carro) R(remover carro) V(voltar) ")
 					leia(usuario)
-					se(usuario == "a" ou usuario == "a") {
+					se(usuario == "c" ou usuario == "C") {
+						escreva("\nLista de carro\n")
+						para(inteiro i=0; i < 200; i++){
+							se(aux % 40 == 0 e aux > 0){
+								escreva("\n")
+							}
+							se(carros[i] != ""){
+								escreva(carros[i]," ")
+								aux++
+							}
+						}
+						se(aux % 40 != 0){
+							escreva("\n")
+						}
+						aux = 0
+					}
+					se(usuario == "a" ou usuario == "A") {
 						escreva("\n")
 						estoque(codigo, Vlucro, "adicionar")
-						escreva("informe aonde voce vai guarda seu carro e codigo ")
+						escreva("\ninforme aonde voce vai guarda seu carro e codigo ")
 						leia(numero)
 						escreva("informe o nome do carro ")
 						leia(usuario)
@@ -179,6 +203,7 @@ programa {
 				}
 				se(codigos[i] == "" e ver[i] == 0) {
 					escreva(i," ")
+					Tcomprovador[cheque] = codigos[i]
 					cheque++
 				}
 				se(acha == 0) {
@@ -198,6 +223,7 @@ programa {
 				}
 				se(codigos[i] != "" e ver[i] == 0) {
 					escreva(i," ")
+					Tcomprovador[cheque] = codigos[i]
 					cheque++
 				}
 				 se(acha == 0) {
@@ -227,18 +253,20 @@ programa {
 				se(ver[i] != "" ) {
 					se(codigos[i] == 0){
 						escreva(i," ")
+						Ncomprovador[cheque] = codigos[i]
 						cheque++
 					}
 				}
 				se(acha == 0) {
 					escreva("\nNenhum numero\n")
 				}
+
 			}
 		}	
 		se(fazer == "remover"){
 			para(inteiro i=0; i < 10; i++){
 				se(ver[i] != "" e codigos[i] != 0){
-					cheque++
+					acha++
 				}
 			}
 			para(inteiro i=0; i < 200; i++){
@@ -247,6 +275,8 @@ programa {
 				}
 				se(codigos[i] != 0) {
 					escreva(i," ")
+					Ncomprovador[cheque] = codigos[i]
+					cheque++
 				} se(cheque == 0) {
 					escreva("\nNenhum numero\n")
 				}
@@ -255,13 +285,14 @@ programa {
 	}
 
 }
+
 /* $$$ Portugol Studio $$$ 
  * 
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 3742; 
- * @DOBRAMENTO-CODIGO = [38, 57, 62, 77, 81, 84, 110, 119, 126, 134, 209];
+ * @POSICAO-CURSOR = 1502; 
+ * @DOBRAMENTO-CODIGO = [41, 65, 85, 89, 92, 107, 116, 105, 121, 134, 143, 150, 158, 187, 235];
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
