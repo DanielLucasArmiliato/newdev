@@ -1,0 +1,40 @@
+* {
+  text-align: center;
+}
+
+body {
+  background-color: crimson 
+}
+
+.titulo { 
+  padding: 10px;
+  font-size: 100px;
+  color: chartreuse;
+}
+
+.caixa {
+  background-color: greenyellow;
+}
+
+.subtitulo {
+  font-size: 50px;
+}
+
+.paragrafo {
+  font-size: 25px;
+}
+
+.loja {
+  font-size: 50px;
+  background-color: rgb(47, 47, 255) !important;
+  color: deeppink;
+}
+
+.sobre {
+  background-color: cornsilk;
+}
+
+.image {
+  width: 500px;
+  height: 500px;
+}
