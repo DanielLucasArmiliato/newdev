@@ -1,0 +1,84 @@
+body {
+  color: #FFF;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section {
+  background-color: rgba(45, 49, 51, 0.81);
+
+  width: 60rem;
+  height: 62.9rem;
+  
+  box-sizing: content-box;
+  padding: 1rem;
+}
+
+h3 {
+  font-family: 'Jura', sans-serif;
+  font-size: 1.2rem;
+
+  text-transform: uppercase;
+
+  margin: 0 2.5rem 1rem;
+  padding-bottom: 0.5rem;
+}
+
+img {
+  width: 54.9rem;
+  height: 28.1rem;
+
+  padding-bottom: 1.5rem;
+  
+  display: block;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+p {  
+  font-size: 1.2rem;
+  font-weight: 400;
+  font-family: 'DM Sans', sans-serif;
+
+  margin: 2rem 3rem;
+
+  text-transform: uppercase;
+  text-align: justify;
+}
+
+button {
+  background-color: rgba(0, 133, 111, 1);
+  color: #FFF;
+
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  font-weight: 700;
+  font-family: 'DM Sans', sans-serif;
+  
+  padding: 16px 38px 16px 32px;
+  border-radius: 80px;
+  border: none;
+
+  display: block;
+
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15rem;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+video {
+  width: 54.9rem;
+  height: 53.2rem;
+}
+
+a {
+  text-decoration: none;
+  color: #FFF;
+}

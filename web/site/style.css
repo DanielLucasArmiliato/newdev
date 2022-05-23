@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  text-align: center;
+}
+
+:root {
+  --primary-color: rgba(0, 133, 111, 1);
+  --paragrafo: rgba(73, 80, 87, 1);
+  --titulo: rgba(33, 37, 41, 1);
+  --background: rgba(220, 233, 226, 1);
+  --sobre: rgba(255, 250, 241, 1);
+  --fonte: rgba(0, 133, 111, 1);
+
+  font-size: 62.5%;
+}
+
+body {
+  display: flex;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1.6rem;
+  text-align: center;
+}
+
+header {
+  width: 37.5rem;
+  height: 108rem;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  background-color: var(--background);
+}
+
+h1 {
+  margin-bottom: 1.6rem;
+  font-size: 3.4rem;
+  color: var(--titulo);
+}
+
+h3 {
+  font-size: 4.6rem;
+  padding-top: 4.1rem;
+}
+
+.inicio {
+  color: var(--primary-color);
+  padding-bottom: 1.6rem;
+}
+
+p {
+  color: var(--paragrafo);
+
+  line-height: 150%;
+  font-weight: 400;
+  font-size: 1.8rem;
+
+  margin-bottom: 3.2rem;
+}
+
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--primary-color);
+  color: #fff;
+  text-transform: uppercase;
+  gap: 1.6rem;
+
+  border-radius: 4rem;
+  padding: 1.6rem 3.2rem;
+
+  width: 26.2rem;
+  height: 5.2rem;
+
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1.6rem;
+
+  border: none;
+}
+
+.mulher {
+  display: block;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+section {
+  position: absolute;
+
+  width: 34.5rem;
+  height: 47rem;
+
+  margin: 0 58.7rem;
+  margin-top: 93.7rem;
+
+  padding-bottom: 1rem;
+
+  font-size: 3.6rem;
+
+  background: var(--sobre);
+  border-radius: 10px;
+}
+
+.sobre {
+  font-size: 1.6rem;
+  color: var(--fonte);
+}

@@ -1,0 +1,126 @@
+:root {
+  --fundo: rgba(243, 225, 246, 1);
+  --subfundo: rgba(195, 78, 215, 1);
+  --fonte: rgba(237, 238, 191, 1);
+  --fonte2: rgba(82, 66, 66, 1);
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  height: 100%;
+}
+
+body {
+  justify-content: center;
+}
+
+header {
+  width: 43.1rem;
+  height: 7.3rem;
+
+  display: flex;
+
+  font-size: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+header,
+button,
+footer {
+  color: var(--fonte);
+  background: var(--subfundo); !important
+}
+
+main {
+  width: 43.1rem;
+  height: 34.4rem;
+
+  background-color: var(--fundo);
+
+  padding: 1.4rem 1.2rem 0;
+  font-size: 1.7rem;
+
+  line-height: 2.1rem;
+}
+
+footer {
+  width: 43.1rem;
+  height: 5rem;
+
+  padding: 1.1rem;
+  font-size: 1.5rem;
+
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+}
+
+h2 {
+  font-family: 'Dancing Script', cursive;
+}
+
+p {
+  font-family: 'Grape Nuts', cursive;
+}
+
+button {
+  width: 15rem;
+  height: 3rem;
+
+  border: none;
+  border-radius: 6px;
+
+  margin-left: 1.2rem;
+
+  font-family: 'Caveat', cursive;
+  font-size: 1.9rem;
+}
+
+img {
+  position: absolute;
+}
+
+.descricao {
+  text-align: justify;
+}
+
+.faze_de_efeito {
+  font-family: 'Caveat', cursive;
+  font-size: 1.9rem;
+  line-height: 2.3rem;
+
+  padding-left: 2rem;
+  padding-top: 1.9rem;
+  padding-bottom: 1.5rem;
+}
+
+.produto {
+  position: absolute;
+
+  padding: 9.3rem 74rem 11rem 0rem;
+
+  z-index: 1;
+}
+
+.fundo {
+  width: 23.3rem;
+  height: 13.1rem;
+
+  margin-left: 2.4rem;
+  margin-top: 7.9rem;
+}
+
+.perfume {
+  width: 20.6rem;
+  height: 20.6rem;
+
+  margin-top: 1rem;
+  margin-left: 6.3rem;
+}
