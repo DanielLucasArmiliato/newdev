@@ -3,14 +3,12 @@ html, body {
 }
 
 body {
-  font-size: 1.6rem;
-  font-family: 'Inconsolata', monospace;
-  background-image: url(https://images.pexels.com/photos/207529/pexels-photo-207529.jpeg?cs=srgb&dl=pexels-pixabay-207529.jpg&fm=jpg);
+   background-image: url(https://images.pexels.com/photos/207529/pexels-photo-207529.jpeg?cs=srgb&dl=pexels-pixabay-207529.jpg&fm=jpg);
 }
 
 header, main, footer {
-  background-color: rgb(33, 28, 121);
-  padding:0 1rem;
+  background-color: rgba(33, 28, 121, 0.950);
+  padding:1rem 1rem;
 
   width: 80%;
   margin: 0 auto;
@@ -37,26 +35,65 @@ header img {
 
 header h3 {
   color: rgb(255, 174, 0);
+  font-family: 'Fjalla One', sans-serif;
+  text-transform: uppercase;
 }
 
 header h3:hover {
-  color: rgb(30, 4, 194);
-  font-size: 25px;
+  color: rgb(169, 117, 6);
+  font-size: 20px;
+}
+
+main {
+  background-color: rgba(255, 255, 255, 0.95);
+
+  display: flex;
+  
+  justify-content: center;
+  align-items: center;
 }
 
 main h1 {
+  text-align: center;
+  font-family: 'Oswald', sans-serif;
   font-size: 3rem;
 }
 
 main p {
+  font-family: 'Roboto Mono', monospace;
   text-align: justify;
   padding: 2rem;
 }
 
-main {
-  background-color: white;
+main img {
+  margin: 1rem ;
+  float:right;
+}
 
+main div {
   display: flex;
+
+  justify-content: center;
+}
+
+main button {
+  padding: 0.5rem 1rem;
+  border-radius: 60px;
+  border: none;
+
+  background-color: rgb(57, 49, 199);
+
+  font-family:'Oswald'sans-serif;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+
+main button:hover {
+  font-size: 2rem;
+
+  background-color: rgb(75, 66, 237);
 }
 
 footer {
@@ -65,10 +102,47 @@ footer {
   flex-direction: column;
 }
 
+footer p {
+  color: rgb(197, 219, 219);
+  font-family: 'Crete Round', serif;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+footer i {
+  color: aqua;
+}
+
+footer .fa-solid {
+  padding: 0.4rem 50%;
+}
+
+footer .social i:hover {
+  color: rgb(59, 171, 245);
+  cursor: pointer;
+}
+
+footer .social{
+  display: flex;
+}
+
+footer .social a{
+  padding-right: 0.5rem;
+}
+
+footer .fa-solid:hover {
+  color: rgb(59, 171, 245);
+  cursor: pointer;
+}
+
+.fa-brands {
+  font-size: 1.2rem;
+}
+
 ul {
   display: flex;
   align-items: center;
-  list-style-type: none;'
+  list-style-type: none;
 }
 
 li {
@@ -79,16 +153,16 @@ a {
   text-decoration: none;
 }
 
-img {
-  
-}
-
-.fa-facebook:hover {
-  color: blue;
-}
+.sobre {
+  flex-direction: column;
+} 
 
 table {
   
+}
+
+.contato {
+  display: flex;
 }
 
 .contato_detalhe {
@@ -98,4 +172,10 @@ table {
   padding-top: 5rem;
 
   text-align: center;
+}
+
+.contato_formulario {
+  display: flex;
+
+  flex-wrap:column wrap;
 }

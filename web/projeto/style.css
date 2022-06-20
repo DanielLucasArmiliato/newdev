@@ -1,0 +1,114 @@
+:root {
+  --fundo: rgb(0, 0, 0);
+  --cafo: rgb(210, 20, 20);
+  --formulario: rgb(97, 8, 8);
+  --cadastro:(66, 3, 3);
+  --fonte: rgb(255, 255, 255);
+  --fontecontato: rgb(142, 142, 142);
+}
+
+body {
+
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding-top: 1rem;
+
+  background-color: var(--cafo);
+  color: rgb(255, 255, 255);
+}
+
+header h4{
+
+}
+
+header img {
+  background-color: white;
+  border-radius: .6rem;
+  padding: .6rem;
+}
+
+main {
+  padding: 5rem 0;
+
+  background-color: black;
+
+  color: var(--fundo);
+  display: flex;
+  justify-content: center;
+}
+
+main h3 {
+  margin: .1rem 0;
+}
+
+main p {
+  margin: .1rem .4rem;
+}
+
+section {
+  background-color: rgb(97, 8, 8);
+  color: rgb(142, 142, 142);
+
+  padding: .2rem .2rem ;
+  border-radius: 15px;
+
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+form {
+  color:rgb(255, 255, 255);
+  background-color: rgb(66, 3, 3);
+
+  box-sizing: content-box;
+
+  padding: .3rem .2rem;
+  border-radius: 15px;
+  
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+}
+
+div {
+  width: 0.5rem;
+  
+}
+
+label {
+  display: inline-block;
+  vertical-align: middle;
+  white-space: nowrap;
+  
+  margin-top: 0.5rem;
+}
+
+input {
+  width: 15rem;
+}
+
+button {
+  padding: ;
+  margin: 1rem .2rem .3rem .2rem;
+  border-radius: 5px;
+}
+
+footer {
+ height:6rem ;
+
+ background-color: var(--cafo);
+}
+
+footer p {
+  text-align: center;
+ 
+  text-transform: uppercase;
+  font-size: 1rem;
+  padding-top: 2.3rem;
+}
